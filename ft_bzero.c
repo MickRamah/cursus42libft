@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:32:15 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/02/25 15:45:02 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/05 15:08:15 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ int	main()
 
 void	ft_bzero(void *str, size_t size)
 {
-	while (size--)
-		*(char *)str++ = '\0';
+	ft_memset(str, '\0', size);
 }
