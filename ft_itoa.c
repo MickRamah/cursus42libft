@@ -6,7 +6,7 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 09:36:17 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/05 14:52:23 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/05 16:53:10 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_len_number(int n)
 	return (len);
 }
 
-long int	ft_abs(long int n)
+static long int	ft_abs(long int n)
 {
 	if (n < 0)
 		return (-n);
@@ -36,9 +36,9 @@ long int	ft_abs(long int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
+	int			len;
 	long int	nbr;
-	char	*str;
+	char		*str;
 
 	nbr = ft_abs(n);
 	len = ft_len_number(n);

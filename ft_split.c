@@ -6,13 +6,13 @@
 /*   By: zramahaz <zramahaz@student.42antanana      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 14:58:32 by zramahaz          #+#    #+#             */
-/*   Updated: 2024/03/03 12:26:03 by zramahaz         ###   ########.fr       */
+/*   Updated: 2024/03/06 11:10:06 by zramahaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_malloc_error(char **tab)
+static char	**ft_malloc_error(char **tab)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ char	**ft_malloc_error(char **tab)
 	return (NULL);
 }
 
-size_t	ft_count_strs(char const *s, char c)
+static size_t	ft_count_strs(char const *s, char c)
 {
 	size_t	i;
 	size_t	nb_strs;
@@ -53,7 +53,7 @@ size_t	ft_count_strs(char const *s, char c)
 	return (nb_strs);
 }
 
-void	ft_get_next_str(char **next_str, size_t *len, char c)
+static void	ft_get_next_str(char **next_str, size_t *len, char c)
 {
 	size_t	i;
 
@@ -100,3 +100,25 @@ char	**ft_split(char const *s, char c)
 
 /*tab[i] = malloc(len + 1);*/
 /*ft_strlcpy(tab[i], next_str, len + 1);*/
+
+/*size_t	ft_count_strs(char const *s, char c)
+{
+	size_t	i;
+	size_t	n;
+
+	i = 0;
+	n = 0;
+	if (!s[0])
+		return (0);
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i] != c)
+			i++;
+		else if (s[i] && s[i] == c)
+			i++;
+		n++;
+	}
+	return (n);
+}*/
